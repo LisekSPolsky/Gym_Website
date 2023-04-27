@@ -1,0 +1,119 @@
+   *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    :root{
+    --clr-0: #121412;
+    --clr-1: #232525;
+    --clr-2: #731225;
+    --clr-3: #932525;
+    --clr-4: #a32525;
+    --clr-5: #c32525;
+    --clr-6: #e32525;
+    }
+
+    body{
+        /* background-color: var(--clr-0); */
+        text-align: center;
+        color: gray;
+    }
+
+    /* left slider
+    SLIDER MENU : */
+    .fa-solid{
+        cursor: pointer;
+        font-size: 40px;
+    }
+    .fa-xmark{
+        font-size: 45px;
+    }
+    aside{
+        position: fixed;
+        width: 400px;
+        right: -340px;
+        transition: .3s ease;
+    }
+
+    aside.show{
+        right: 20px;
+        display: inline;
+    }
+    /* ON AND OFF BURGER ICON */
+    .burger{
+        margin-top: 20px;
+        position: fixed;
+    }
+    /* LISTA OPCJI W MENU : */
+    .menuOption{
+        list-style-type: none;
+        height: 60px;
+        /* border: 3px  solid; */
+        background-color: var(--clr-0);
+        border: gray solid 2px;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 15px;
+        font-size: 50px;
+        box-shadow: 16px 14px 20px var(--clr-1);
+        /* justify-content: center; */
+    }
+    .menuOption:hover{
+        background-color:  var(--clr-3);
+    }
+
+    i.landspace{
+        display: none;
+    } 
+    nav{
+        margin: 0px 0px 0px 60px;
+    }
+    i.show{
+        display: none;
+    }
+    a{
+        display: block;
+        color: gray;
+        text-decoration: none;
+    }
+    
+    /* SEKCJA GŁÓWNA BODY:  */
+
+
+
+@media(orientation: portrait){
+
+
+    .burger{
+        display: none;
+    }
+    nav{
+        margin:0;
+    }
+    a.landspace{
+        display: none;
+    }
+    .menuOption{
+        height: 13vw;
+        width: 13vw;
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px var(--clr-1);
+    }
+    aside{
+        top: 40vw;
+        width: 13vw;
+        left: 80vw;
+        transition: .3s ease;
+    }
+    i.landspace{
+        display:block;
+    }
+    .fa-solid{
+        position: relative;
+        transform: translate(0, 30%);
+        font-size: 8vw;
+    }
+
+}
